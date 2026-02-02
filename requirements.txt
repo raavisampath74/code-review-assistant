@@ -1,0 +1,27 @@
+# Core Dependencies
+streamlit==1.31.0
+langchain==0.1.6
+langchain-community==0.0.19
+langchain-openai==0.0.5
+chromadb==0.4.22
+openai==1.12.0
+
+# Embeddings & Vector Store
+sentence-transformers==2.3.1
+tiktoken==0.5.2
+
+# Google Cloud / Vertex AI
+google-cloud-aiplatform==1.38.1
+google-generativeai==0.3.2
+
+# CrewAI for Multi-Agent
+crewai==0.11.0
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+watchdog==3.0.0
+
+# Code Parsing
+ast2json==0.2.1
+pygments==2.17.2

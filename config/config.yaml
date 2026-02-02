@@ -1,0 +1,51 @@
+# Configuration for AI Code Review Assistant
+
+# API Keys (Use environment variables in production)
+openai:
+  api_key: "${OPENAI_API_KEY}"
+  model: "gpt-3.5-turbo"
+  embedding_model: "text-embedding-ada-002"
+  temperature: 0.3
+  max_tokens: 2000
+
+# Google Cloud Vertex AI Configuration
+vertex_ai:
+  project_id: "${GCP_PROJECT_ID}"
+  location: "us-central1"
+  model: "gemini-pro"
+  embedding_model: "textembedding-gecko@003"
+
+# ChromaDB Configuration
+vector_store:
+  collection_name: "code_review_knowledge"
+  persist_directory: "./chroma_db"
+  distance_metric: "cosine"
+
+# Embedding Configuration
+embeddings:
+  provider: "openai"  # Options: openai, vertex_ai, huggingface
+  chunk_size: 500
+  chunk_overlap: 50
+  top_k: 5
+
+# Review Settings
+review:
+  severity_levels:
+    - HIGH
+    - MEDIUM
+    - LOW
+  categories:
+    - security
+    - performance
+    - readability
+    - best_practices
+    - logic
+
+# CrewAI Agent Settings
+agents:
+  reviewer:
+    role: "Senior Code Reviewer"
+    goal: "Analyze code for quality, readability, and best practices"
+  security:
+    role: "Security Analyst"
+    goal: "Identify vulnerabilities and security issues"
