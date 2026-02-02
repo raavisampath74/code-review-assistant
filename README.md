@@ -13,7 +13,6 @@ An AI-powered code review system using **RAG pipelines**, **ChromaDB**, and **La
 | 🔎 **Vector Search** | ChromaDB for semantic code retrieval |
 | 📊 **Smart Scoring** | Issue severity classification (HIGH/MEDIUM/LOW) |
 | 🎨 **Modern UI** | Beautiful Streamlit interface |
-| ☁️ **Cloud Ready** | Deploy to Google Cloud Run |
 
 ---
 
@@ -50,9 +49,7 @@ code-review-assistant/
 ├── agents/                 # CrewAI agents
 ├── llm/                    # LLM clients
 ├── utils/                  # Helpers
-├── Dockerfile              # Container image
-├── cloudbuild.yaml         # Cloud Build config
-└── deploy.sh               # Deployment script
+└── requirements.txt        # Dependencies
 ```
 
 ---
@@ -79,35 +76,6 @@ code-review-assistant/
 
 ---
 
-## ☁️ Deploy to Google Cloud Run
-
-### Prerequisites
-
-- Google Cloud account
-- `gcloud` CLI installed
-- Billing enabled
-
-### One-Click Deploy
-
-```bash
-# Authenticate
-gcloud auth login
-
-# Deploy
-./deploy.sh YOUR_PROJECT_ID
-```
-
-### Manual Deploy
-
-```bash
-gcloud run deploy code-review-assistant \
-  --source . \
-  --region us-central1 \
-  --allow-unauthenticated
-```
-
----
-
 ## 🛠️ Tech Stack
 
 | Component | Technology |
@@ -118,7 +86,6 @@ gcloud run deploy code-review-assistant \
 | **Vector DB** | ChromaDB |
 | **Orchestration** | LangChain |
 | **Multi-Agent** | CrewAI |
-| **Deployment** | Docker + Cloud Run |
 
 ---
 
@@ -135,4 +102,4 @@ gcloud run deploy code-review-assistant \
 
 - ⏱️ **30% faster** code review process
 - 🎯 **Context-aware** analysis via RAG
-- 📦 **Scalable** cloud deployment
+- 📦 **Scalable** AI-driven review system
