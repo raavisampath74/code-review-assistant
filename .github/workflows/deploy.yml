@@ -4,9 +4,6 @@
 name: Deploy to Cloud Run
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch: # Allow manual trigger
 
 env:
