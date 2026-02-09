@@ -31,8 +31,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Open http://localhost:8501
-
 ---
 
 ## 📁 Project Structure
@@ -97,6 +95,7 @@ code-review-assistant/
 - 🔵 **Best Practices** — SOLID principles, DRY
 
 ---
+
 
 ## 📈 Results
 
